@@ -112,7 +112,7 @@ public class adminHome extends javax.swing.JFrame {
         JFrame jf = new JFrame();
         jf.setAlwaysOnTop(true);
         int a = JOptionPane.showConfirmDialog(jf, "Do You Really Wanna Log Out", "Select", JOptionPane.YES_NO_OPTION);
-        if(a ==0){
+        if(a == 0){//yes means 0, no means 1
             setVisible(false);
             new loginAdmin().setVisible(true);
         }
