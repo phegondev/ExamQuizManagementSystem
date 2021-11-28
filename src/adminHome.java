@@ -54,6 +54,11 @@ public class adminHome extends javax.swing.JFrame {
         jMenu1.setText("Add New Question");
         jMenu1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 30));
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu1);
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Update Question.png"))); // NOI18N
@@ -128,6 +133,20 @@ public class adminHome extends javax.swing.JFrame {
             System.exit(0);
         }
     }//GEN-LAST:event_jMenu7MouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        // TODO add your handling code here:
+        /**what will happen when the mouse is clicked on addSTudent*/
+        if(open == 0){
+            new addNewQuestion().setVisible(true);
+            open = 1;
+        }else{
+            
+            JFrame jf = new JFrame(); //we are creating a new jFrame
+            jf.setAlwaysOnTop(true); //we are saying ot it always be on top i.r foreground
+            JOptionPane.showMessageDialog(jf, "One form is already open");
+        }
+    }//GEN-LAST:event_jMenu1MouseClicked
 
     /**
      * @param args the command line arguments
